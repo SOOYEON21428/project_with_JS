@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        let total = 5000 + 8000 + 10000 + 9000;
+    undefined
+
+    total;
+    32000
+
+    console.log(total);
+    VM504:1 32000
+    undefined
+
+    let string = 'Hello, variable';
+    undefined
+
+    string;
+    'Hello, variable'
+    //변수는 메모리에 저장되어있음. But 메모리를 초기화하면 메모리에 저장되어 있던 변수도 같이 사라짐. 따라서 새로고침하면 이러한 에러가 나타남 . 'Uncaught ReferenceError: string is not defined'
+    undefined
+
+    let empty
+    undefined
+
+    empty
+    undefined
+
+    let empty; let empty;
+    VM1151:1 Uncaught SyntaxError: Identifier 'empty' has already been declared
+    //원칙적으로 한번 선언한 변수는 다시 선언 불가.
+    undefined
+
+    let change = '바꿔 봐';
+    undefined
+
+    change = '바꿨다';
+    '바꿨다'
+
+    change;
+    '바꿨다'
+    //change='바꿨다'에서 값이 나오는 이유는-- 이는 let의 역할 때문. let이 앞에 붙는 다는건 '선언문' 
+    undefined
+
+    change = undefined;
+    undefined
+
+    change = null;
+    null
+    //두경우 모든 변수의 값을 빈 값으로 바꾼다는 점에서 동일 but 많은 개발자가 null을 대입해 값을 의도적으로 지웠다는 의미 부여
+    undefined
+
+    let string = 'Hello, variable';
+    undefined
+
+    let string2 = string;
+    undefined
+
+    string2;
+    'Hello, variable'
+    let number = 5;
+    undefined
+
+    number = number + 3;
+    8
+    //축약
+    undefined
+
+    number += 3;
+    11
+
+    number -= 3;
+    8
+
+    number = number - 3;
+    5
+
+    console.log('긴 문자열입니다.');
+    VM2845:1 긴 문자열입니다.
+    undefined
+
+    let string1 = '긴 문자열입니다.';
+    undefined
+
+    console.log(string1);
+    VM3035:1 긴 문자열입니다.
+    undefined
+    //let 외에도 const 와 var로도 변수를 선언할 수 있다. const는 상수의 줄임말. 
+    undefined
+
+    const string1 = '긴 문자열입니다.';
+    VM3516:1 Uncaught SyntaxError: Identifier 'string1' has already been declared
+    let string1 = '긴 문자열입니다.';
+    undefined
+
+    const string1 = '긴 문자열입니다.';
+    VM3754:1 Uncaught SyntaxError: Identifier 'string1' has already been declared
+
+    const value = '상수입니다.';
+    undefined
+
+    const wrong;
+    VM3876:1 Uncaught SyntaxError: Missing initializer in const declaration
+
+    var variable = '다시 선언할 수 있습니다.';
+    undefined
+
+    var undefined = 'defined';
+    undefined
+
+    var Infinity = 0;
+    undefined
+
+    var let = 'const';
+    undefined
+
+    let unefined = 'defined';
+    undefined
+
+    let undefined = 'defined';
+    VM4777:1 Uncaught SyntaxError: Identifier 'undefined' has already been declared
+
+    let Infinity = 0;
+    VM4836:1 Uncaught SyntaxError: Identifier 'Infinity' has already been declared
+
+    let let = 'const';
+    VM4889:1 Uncaught SyntaxError: let is disallowed as a lexically bound name
+
+    /*문제 5번
+    let a =5;
+    undefined
+    let b =3;
+    undefined
+    let temp = a;
+    undefined
+    a = b;
+    3
+    b = temp;
+    5*/
+</body>
+</html>
